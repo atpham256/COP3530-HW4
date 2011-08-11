@@ -1,5 +1,5 @@
 all:
-	${MAKE}  hw4
+	make hw4
 hw4: hw4.o
 	g++ -g -Wall -o hw4 hw4.o
 hw4.o: hw4.cpp

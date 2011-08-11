@@ -1,6 +1,12 @@
 // Name: Anthony T. Pham
 // UF ID: 5038-1111
 // Discussion section #: 1079
+// Data Structures Homework #4
+//
+// To compile:
+// make all
+// To clean:
+// make clean
 
 Below are the answers for the non-code portion of hw4. After the answers I also provide
 a brief explanation of my hw4.cpp file and the methods I created to clarify any ambiguity.
