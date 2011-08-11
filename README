@@ -1,0 +1,35 @@
+// Name: Anthony T. Pham
+// UF ID: 5038-1111
+// Discussion section #: 1079
+
+Below are the answers for the non-code portion of hw4. After the answers I also provide
+a brief explanation of my hw4.cpp file and the methods I created to clarify any ambiguity.
+
+#17:
+b) The meld method I created has only linear complexity because the for loop only runs
+(a.size() + b.size()) times which is a linear amount. To ensure that we do not traverse the chains
+of a and b, I take advantage of the push_back method and lastNode member variable of extendedChain class.
+Instead of traversing to the last node, we can automatically get there making inserting at the end of the
+chain O(1). Retrieving the elements from a and b were made faster by always taking the 0th element and then
+erasing it so the next element in the chain would become the new 0th element. This ensures we only access
+each node once and therefore make the complexity linear O(n).
+
+#21:
+b) The split method I created is of linear complexity because we only access each element once due
+to the use of the iterator class. The iterator variable created traverses the chain and at each node
+we copy the element into either a or b. We can traverse the chain and copy at the same time, instead of
+having to traverse the chain over and over again each time we want to copy. This reduces the time
+complexity to linear O(n).
+
+NOTE: My non-member meld() method destroys the nodes in a and b in the process of combining the 2 chains into c.
+The first two parameters a and b are the extendedChains you want to combine and the third parameter c, is
+the extendedChain you want the combined chain to go in.
+
+For my non-member split() method, the first parameter c, is the extendedChain that you want split and the
+last 2 parameters a and b, are the extendedChains you want the split chains to go in.
+
+For my member split() method, the two parameters a and b, are the chains you want the split chains
+to go in.
+
+I also wrote the member split() method in the chainWithIterator.h file in the chain class (problem #22).
+The methods are problem #17 and #21 are in the extendedChain class.
